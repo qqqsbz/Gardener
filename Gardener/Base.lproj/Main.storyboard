@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HKz-Nf-TWj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="Fn5-3E-uQI">
+            <objects>
+                <collectionViewController id="HKz-Nf-TWj" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kZE-En-dsd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.96470588235294119" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gnD-cV-kHb">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NUl-1R-ZAl">
+                                <rect key="frame" x="10" y="10" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="HKz-Nf-TWj" id="orb-Gb-Td3"/>
+                            <outlet property="delegate" destination="HKz-Nf-TWj" id="e0F-4J-fvZ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiQ-WW-3aJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="452"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nOD-wO-Xoj">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="Lt4-4D-Htl" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3wU-29-Vct"/>
+                        <viewControllerLayoutGuide type="bottom" id="1kB-C0-nSD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Muv-uK-Zfy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9d-jG-rG4">
+                                <rect key="frame" x="56" y="0.0" width="8" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="tfW-WK-8b5"/>
+                                </constraints>
+                            </view>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duorou4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FFK-nY-XsA">
+                                <rect key="frame" x="15" y="20" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="OeY-UB-WF3"/>
+                                    <constraint firstAttribute="height" constant="90" id="bak-7P-Yg1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.96470588239999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1kB-C0-nSD" firstAttribute="top" secondItem="y9d-jG-rG4" secondAttribute="bottom" id="2pN-2g-bU2"/>
+                            <constraint firstItem="y9d-jG-rG4" firstAttribute="top" secondItem="3wU-29-Vct" secondAttribute="bottom" constant="-20" id="JWk-2T-f4K"/>
+                            <constraint firstItem="FFK-nY-XsA" firstAttribute="top" secondItem="3wU-29-Vct" secondAttribute="bottom" id="LUs-6r-g8i"/>
+                            <constraint firstItem="FFK-nY-XsA" firstAttribute="leading" secondItem="Muv-uK-Zfy" secondAttribute="leading" constant="15" id="YQy-fc-f2G"/>
+                            <constraint firstItem="y9d-jG-rG4" firstAttribute="centerX" secondItem="FFK-nY-XsA" secondAttribute="centerX" id="tRP-Wc-Nb6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FFK-nY-XsA" id="Ddc-Bd-UDI"/>
+                        <outlet property="separatorView" destination="y9d-jG-rG4" id="VYk-Aa-VZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeC-5P-NWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="452"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="duorou4.jpg" width="350" height="350"/>
+    </resources>
+</document>
